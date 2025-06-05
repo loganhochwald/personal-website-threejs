@@ -1,11 +1,9 @@
 import {
   Stage,
-  OrbitControls,
-  Text3D,
-  Center,
-  Outlines,
 } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
+import Name from './Name';
+import Logos from './Logos';
 
 function App() {
   return (
@@ -19,6 +17,7 @@ function App() {
         <color attach="background" args={['#1a1a1a']} />
         <ambientLight intensity={0.3} />
         <pointLight position={[10, 10, 10]} intensity={0.8} />
+        <Logos />
         <Stage
           intensity={0.8}
           preset="rembrandt"
@@ -26,26 +25,10 @@ function App() {
           adjustCamera={1.2}
           environment="sunset"
         >
-          <Center>
-            <Text3D
-              bevelEnabled
-              bevelSize={0.03}
-              bevelThickness={0.1}
-              height={0.6}
-              lineHeight={0.7}
-              letterSpacing={-0.05}
-              size={1.8}
-              font="/Share_Tech_Mono_Regular.json"
-            >
-              {`Logan\nHochwald`}
-              <meshStandardMaterial color="#0b5626" />
-              <Outlines thickness={2} color="#43040b" />
-            </Text3D>
-          </Center>
+          <Name />
         </Stage>
       </Canvas>
     </div>
-  );
-}
+  );}
 
 export default App;
