@@ -7,14 +7,14 @@ import Logos from './Logos';
 
 function App() {
   return (
-    <div className="h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center">
+    <div className="h-dvh bg-bg-neutral-900 flex flex-col bg-gradient-to-br from-gray-900 via-black to-gray-800 flex items-center justify-center">
       <Canvas
         shadows
         gl={{ antialias: true }}
         dpr={[1, 2]}
         camera={{ position: [-5, 2, 10], fov: 60 }}
       >
-        <color attach="background" args={['#1a1a1a']} />
+        <color attach="background" args={['#171717']} />
         <ambientLight intensity={0.3} />
         <pointLight position={[10, 10, 10]} intensity={0.8} />
         <Logos />
