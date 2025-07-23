@@ -1,6 +1,5 @@
 import {
   Stage,
-  Loader
 } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import Name from './Name';
@@ -9,7 +8,6 @@ import Logos from './Logos';
 function App() {
   return (
     <div className="h-dvh bg-bg-neutral-900 flex flex-col items-center justify-center">
-      <Loader />
       <Canvas
         shadows
         gl={{ antialias: true }}
